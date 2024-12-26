@@ -23,9 +23,7 @@ ext{
 }
 dependencies {
 
-	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation "com.google.guava:guava:$guavaVersion"
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
@@ -37,7 +35,7 @@ tasks.register('customFatJar', Jar) {
 	manifest {
 		attributes 'Main-Class': 'ru.kolesnikov.hw01gradle.Hw01GradleApplication'
 	}
-	archiveBaseName = 'all-in-one-jar'
+	archiveBaseName = 'fat-jar'
 	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 	from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
 	with jar

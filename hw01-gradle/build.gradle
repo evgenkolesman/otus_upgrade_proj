@@ -4,7 +4,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.1.7'
 }
 
-group = 'com.example'
+group = 'ru.kolesnikov'
 version = '0.0.1-SNAPSHOT'
 
 java {
@@ -35,7 +35,7 @@ tasks.named('test') {
 
 tasks.register('customFatJar', Jar) {
 	manifest {
-		attributes 'Main-Class': 'com.baeldung.fatjar.Application'
+		attributes 'Main-Class': 'ru.kolesnikov.hw01gradle.Hw01GradleApplication'
 	}
 	archiveBaseName = 'all-in-one-jar'
 	duplicatesStrategy = DuplicatesStrategy.EXCLUDE

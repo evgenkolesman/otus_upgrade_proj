@@ -1,4 +1,4 @@
-package com.example.hw01gradle;
+package ru.kolesnikov.hw01gradle;
 
 import com.google.common.base.Strings;
 
